@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContratoFácil - Gerador de Contratos para Freelancers</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">ContratoFácil</div>
+      <button class="ghost-button" id="downloadButton" type="button">Baixar contrato</button>
+    </nav>
+    <div class="hero-content">
+      <div>
+        <span class="badge">Freelancers & Projetos</span>
+        <h1>Crie contratos profissionais em minutos.</h1>
+        <p>
+          Preencha as informações do projeto, revise o contrato gerado e faça o download
+          para enviar ao seu cliente. Tudo em um só lugar.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-button" id="generateButton" type="button">Gerar contrato</button>
+          <button class="secondary-button" id="copyButton" type="button">Copiar texto</button>
+        </div>
+        <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+      </div>
+      <div class="hero-card">
+        <h3>Como funciona</h3>
+        <ol>
+          <li>Informe os dados do freelancer e do cliente.</li>
+          <li>Descreva o escopo, prazos e condições.</li>
+          <li>Revise e personalize o contrato.</li>
+          <li>Baixe ou copie o documento final.</li>
+        </ol>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Dados principais</h2>
+      <form id="contractForm">
+        <div class="grid">
+          <label>
+            Nome do freelancer
+            <input type="text" name="freelancerName" placeholder="Ex: Ana Souza" required />
+          </label>
+          <label>
+            Documento do freelancer (CPF/CNPJ)
+            <input type="text" name="freelancerDoc" placeholder="Ex: 000.000.000-00" required />
+          </label>
+          <label>
+            Nome do cliente
+            <input type="text" name="clientName" placeholder="Ex: Agência Criativa" required />
+          </label>
+          <label>
+            Documento do cliente (CPF/CNPJ)
+            <input type="text" name="clientDoc" placeholder="Ex: 00.000.000/0001-00" required />
+          </label>
+          <label>
+            Serviço principal
+            <input type="text" name="serviceTitle" placeholder="Ex: Design de landing page" required />
+          </label>
+          <label>
+            Valor total (R$)
+            <input type="number" name="paymentTotal" placeholder="Ex: 3500" min="0" step="0.01" required />
+          </label>
+          <label>
+            Forma de pagamento
+            <input type="text" name="paymentMethod" placeholder="Ex: 50% entrada + 50% na entrega" required />
+          </label>
+          <label>
+            Prazo de entrega
+            <input type="text" name="deliveryDate" placeholder="Ex: 15/11/2024" required />
+          </label>
+        </div>
+
+        <label class="full">
+          Escopo detalhado
+          <textarea name="scope" rows="4" placeholder="Descreva as atividades, entregáveis e limites do projeto." required></textarea>
+        </label>
+
+        <div class="grid">
+          <label>
+            Data de início
+            <input type="text" name="startDate" placeholder="Ex: 01/11/2024" required />
+          </label>
+          <label>
+            Cidade / Foro
+            <input type="text" name="jurisdiction" placeholder="Ex: São Paulo - SP" required />
+          </label>
+          <label>
+            Contato do freelancer
+            <input type="text" name="freelancerContact" placeholder="Ex: (11) 99999-0000" required />
+          </label>
+          <label>
+            Contato do cliente
+            <input type="text" name="clientContact" placeholder="Ex: (11) 98888-0000" required />
+          </label>
+        </div>
+      </form>
+    </section>
+
+    <section class="preview-section">
+      <div class="preview-header">
+        <h2>Contrato gerado</h2>
+        <p>Revise o texto abaixo antes de enviar ao cliente.</p>
+      </div>
+      <article id="contractPreview" class="preview">
+        <p class="placeholder">Preencha o formulário e clique em "Gerar contrato" para visualizar o texto.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>ContratoFácil © 2024. Ferramenta criada para freelancers organizarem projetos com confiança.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
