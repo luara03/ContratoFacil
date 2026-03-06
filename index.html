@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Anúncios de Achadinhos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Gerador de Anúncios de Achadinhos</h1>
+      <p>Cole um link de produto e gere um anúncio com imagem, copy, CTA e link em segundos.</p>
+    </header>
+
+    <section class="card form-card">
+      <label for="product-url">Link do produto</label>
+      <div class="input-group">
+        <input id="product-url" type="url" placeholder="https://loja.com/produto" required />
+        <button id="generate-btn">Gerar anúncio</button>
+      </div>
+      <small id="status" aria-live="polite"></small>
+    </section>
+
+    <section class="card" id="ad-section" hidden>
+      <h2>Prévia do anúncio</h2>
+      <article class="ad-preview">
+        <img id="ad-image" alt="Imagem do produto" />
+        <div class="ad-content">
+          <h3 id="ad-title"></h3>
+          <textarea id="ad-copy" rows="5"></textarea>
+          <div class="cta-row">
+            <input id="ad-cta" type="text" />
+            <a id="ad-link" target="_blank" rel="noopener noreferrer">Ver oferta</a>
+          </div>
+        </div>
+      </article>
+      <div class="actions">
+        <button id="copy-btn">Copiar copy</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
