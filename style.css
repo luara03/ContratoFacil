@@ -1,0 +1,149 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --card: #fff;
+  --text: #12223d;
+  --muted: #5d6b82;
+  --primary: #1259ff;
+  --primary-hover: #0d46cc;
+  --line: #d8deec;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(18, 34, 61, 0.06);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.form-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem;
+}
+
+input,
+textarea,
+button,
+a {
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  font-size: 1rem;
+}
+
+input,
+textarea {
+  padding: 0.7rem 0.8rem;
+  width: 100%;
+}
+
+button {
+  padding: 0.7rem 1rem;
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+#status {
+  display: block;
+  min-height: 1.2rem;
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+.ad-preview {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1rem;
+}
+
+#ad-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.ad-content h3 {
+  margin-top: 0;
+}
+
+#ad-copy {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.cta-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+#ad-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 0 1rem;
+  white-space: nowrap;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+@media (max-width: 740px) {
+  .input-group,
+  .ad-preview,
+  .cta-row {
+    grid-template-columns: 1fr;
+  }
+
+  #ad-link {
+    min-height: 42px;
+  }
+}
