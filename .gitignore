@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.venv/
+telegram_scheduler.db
+.pytest_cache/
