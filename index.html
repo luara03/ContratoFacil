@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventoPro Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>EventoPro</h1>
+    <nav id="menu"></nav>
+    <button id="themeToggle" class="ghost">🌙 Modo escuro</button>
+  </aside>
+
+  <main class="content">
+    <header class="topbar">
+      <input id="globalSearch" placeholder="Pesquisa global..." />
+      <div class="user">Admin</div>
+    </header>
+
+    <section id="dashboard" class="view active"></section>
+    <section id="moduleView" class="view"></section>
+  </main>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <h3></h3>
+      <p></p>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
