@@ -1,0 +1,44 @@
+:root {
+  --bg: #f4f6fb;
+  --panel: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #334155;
+  --accent: #2563eb;
+  --danger: #dc2626;
+}
+body.dark {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --primary: #cbd5e1;
+  --accent: #60a5fa;
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,sans-serif}
+body{margin:0;display:flex;background:var(--bg);color:var(--text)}
+.sidebar{position:fixed;left:0;top:0;bottom:0;width:260px;background:var(--panel);border-right:1px solid #e5e7eb;padding:18px;overflow:auto}
+.sidebar h1{margin:0 0 14px;font-size:1.2rem}
+#menu button{display:block;width:100%;text-align:left;padding:10px 12px;margin-bottom:8px;border-radius:10px;border:none;background:transparent;color:var(--text);cursor:pointer}
+#menu button.active,#menu button:hover{background:rgba(37,99,235,.1)}
+.ghost{width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:10px;background:transparent;color:var(--text);cursor:pointer}
+.content{margin-left:260px;flex:1;min-height:100vh;padding:18px}
+.topbar{display:flex;justify-content:space-between;gap:10px;background:var(--panel);padding:12px;border-radius:12px;margin-bottom:12px}
+.topbar input{flex:1;padding:10px;border-radius:10px;border:1px solid #cbd5e1;background:transparent;color:var(--text)}
+.view{display:none}
+.view.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--panel);border-radius:12px;padding:14px;border:1px solid rgba(148,163,184,.25)}
+.module{background:var(--panel);padding:14px;border-radius:12px}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+input,select,textarea{padding:10px;border-radius:10px;border:1px solid #cbd5e1;background:transparent;color:var(--text);width:100%}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{padding:8px;border-bottom:1px solid rgba(148,163,184,.3);text-align:left}
+.actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+button.primary{background:var(--accent);color:white;border:none;padding:10px 12px;border-radius:10px;cursor:pointer}
+.badge{padding:2px 8px;border-radius:999px;background:rgba(37,99,235,.1);font-size:.8rem}
+@media (max-width:900px){
+  .sidebar{width:100%;position:static;height:auto;border-right:none;border-bottom:1px solid #e5e7eb}
+  .content{margin-left:0}
+}
